@@ -5,6 +5,10 @@ beforeEach(() => {
   cy.visit('/')
 });
 
+afterEach (() => {
+  cy.screenshot()
+});
+
   it('Deve fazer o cadastro de campos obrigatórios', () => {
     var email = `zaira${Date.now()}@teste.com`
     cy.preencherCadastro('Fabio' , 'Araujo', email, '11989898937', 'Teste@12345')
